@@ -1,0 +1,43 @@
+
+
+.pokemon-listings {
+    margin: 40px 0 0 75px;
+    font-size: 40px;
+}
+
+.pokemon-table {
+    margin: 20px 75px;
+    border: 1px solid #af2020;
+
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    width: calc(100vw - 150px);
+}
+
+.pokemon:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.header-container {
+    color: white;
+    background-color: #d42e2e;
+    padding: 10px;
+}
+
+th {
+    text-align: left;
+}
+
+.list-container {
+    background-color: #ffebeb;
+}
+
+.list-container:nth-child(even) {
+    background-color: white;
+}
+
+.table-padding {
+    padding: 20px 0 20px 30px;
+}

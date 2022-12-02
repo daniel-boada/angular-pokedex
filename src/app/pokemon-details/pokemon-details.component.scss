@@ -1,0 +1,119 @@
+.body {
+    text-align: center;
+    margin: auto;
+    width: 800px;
+}
+
+.grid {
+    border: 5px solid #841010;
+    background-color: #d42e2e;
+    border-radius: 25px;
+    display: grid;
+    padding: 10px;
+    margin: 0;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-template-areas: 
+      "image name name "
+      "image height weight"
+      "hp attack defense"
+      "speed special-attack special-defense";
+}
+.big-circle {
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    background:
+    radial-gradient(farthest-side,rgb(68, 68, 236) 80%,white 61%);
+    border-radius: 50%;
+    display: inline-block;
+}
+.button-container {
+    margin: 30px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    color: #d42e2e;
+    font-size: 18px;
+}
+.button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.name-container {
+    display: flex;
+    justify-content: space-between;
+}
+.stat {
+   margin: 10px;
+   font-size: 20px;
+   font-weight: 700; 
+}
+
+.subtitle {
+    text-align: center;
+    color: gray;
+    font-size: 16px;
+}
+
+.smallBox {
+    margin: 10px;
+    text-align: center;
+    border: 5px solid #841010;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.image {
+    grid-area: image;
+}
+
+.type {
+    font-size: 24px;
+    font-weight: 200;
+    margin-top: -10px;
+}
+
+.name {
+    grid-area: name;
+    text-align: initial;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 0 10px 15px;
+}
+    
+.height {
+    grid-area: height;
+}
+
+.weight {
+    grid-area: weight;
+}
+
+.hp {
+    grid-area: hp;
+}
+
+.attack {
+    grid-area: attack;
+}
+
+.defense {
+    grid-area: defense;
+}
+
+.speed {
+    grid-area: speed;
+}
+
+.special-attack {
+    grid-area: special-attack;
+}
+
+.special-defense {
+    grid-area: special-defense;
+}

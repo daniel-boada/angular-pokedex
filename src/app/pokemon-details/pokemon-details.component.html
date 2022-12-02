@@ -1,0 +1,63 @@
+<div class="body">
+    <div class="button-container">
+        <a class="button" (click)="onBack()">&#8678; Back to National Pokedex</a>
+    </div>
+    <div class="grid">
+        <div class="smallBox image">
+            <img [src]='pokemonDetails?.imageNormal' [alt]="pokemonDetails?.name" height="100%">
+        </div>
+        <div class="name">
+            <div class="name-container">
+                <div> #{{ pokemonDetails?.dex | number:'3.0' }} - {{ pokemonDetails?.name | titlecase}}</div>
+                <div class="big-circle"></div>
+            </div>
+            <div class="type">{{ pokemonDetails?.type | titlecase}}</div>
+        </div>
+        <div class="smallBox height">
+            <div class="stat">{{ pokemonDetails?.height }}</div>
+            <div class="subtitle">Height</div>
+        </div>
+        <div class="smallBox weight">
+            <div class="stat">{{ pokemonDetails?.weight }}</div>
+            <div class="subtitle">Weight</div>
+        </div>
+        <div class="smallBox hp">
+            <div class="stat">{{ pokemonDetails?.HP }}</div>
+            <div class="subtitle">HP</div>
+        </div>
+        <div class="smallBox attack">
+            <div class="stat">{{ pokemonDetails?.attack }}</div>
+            <div class="subtitle">Attack</div>
+        </div>
+        <div class="smallBox defense">
+            <div class="stat">{{ pokemonDetails?.defense }}</div>
+            <div class="subtitle">Defense</div>
+        </div>
+        <div class="smallBox speed">
+            <div class="stat">{{ pokemonDetails?.speed }}</div>
+            <div class="subtitle">Speed</div>
+        </div>
+        <div class="smallBox special-attack">
+            <div class="stat">{{ pokemonDetails?.specialAttack }}</div>
+            <div class="subtitle">Special Attack</div>
+        </div>
+        <div class="smallBox special-defense">
+            <div class="stat">{{ pokemonDetails?.specialDefense }}</div>
+            <div class="subtitle">Special Defense</div>
+        </div>
+    </div>
+    <div class="button-container">
+        <a 
+            class="button" 
+            *ngIf="currentDex > 1" 
+            (click)="changeDisplayedPokemon(currentDex - 1)">
+                &#8678; #{{ previousPokemon?.dex | number:'3.0' }} - {{ previousPokemon?.name | titlecase }}
+        </a>
+        <a 
+            class="button" 
+            *ngIf="currentDex < listOfPokemon.length"
+            (click)="changeDisplayedPokemon(currentDex + 1)">
+            #{{ nextPokemon?.dex | number:'3.0'}} - {{ nextPokemon?.name | titlecase }} &#8680;
+        </a>
+    </div>
+</div>

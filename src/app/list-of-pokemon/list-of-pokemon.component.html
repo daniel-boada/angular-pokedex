@@ -1,0 +1,25 @@
+<div>
+	<div class="pokemon-listings">Pokemon Listings</div>
+	<table cellspacing="0" class="pokemon-table">
+		<thead class="header-container">
+			<tr>
+				<th class="table-padding">Dex #</th>
+				<th>Pokemon</th>
+				<th>Type</th>
+			</tr>
+		</thead>
+		<tbody class="list-container" *ngFor="let pokemon of listOfPokemon; index as i">
+			<tr *ngIf="i < 10">
+				<td class="table-padding">
+					#{{ pokemon.dex | number:'3.0'}}
+				</td>
+				<td class="pokemon" (click)="displayPokemonDetails(pokemon.dex)">
+					{{ pokemon.name | titlecase }}
+				</td>
+				<td>
+					{{ pokemon.type | titlecase }}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
